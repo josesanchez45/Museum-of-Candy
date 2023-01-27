@@ -32,7 +32,7 @@
     <header>
       <nav
         id="mainNavbar"
-        class="navbar navbar-dark navbar-expand-md py-0 fixed-top"
+        class="navbar navbar-dark navbar-expand-md py-4 py-md-0 fixed-top"
       >
         <a href="" class="navbar-brand">Candy</a>
         <button
@@ -85,7 +85,7 @@
       </div>
     </section>
     <section class="container-fluid px-0">
-      <div class="row align-items-center">
+      <div class="row align-items-center content">
         <div class="col-md-6 px-0 order-2 order-md-1">
           <img
             src="/imgs/milk.png"
@@ -95,19 +95,73 @@
         </div>
         <div class="col-md-6 text-center order-1 order-md-2">
           <div class="row justify-content-center">
-            <div class="col-10 col-lg-8 blurb">
+            <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
               <h2>MUESEUM OF CANDY</h2>
+              <img
+              src="/imgs/lolli_icon.png"
+              class="d-none d-lg-inline"
+              alt=""
+            />
               <p class="lead">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Assumenda et ipsam harum aliquid tempora sequi tempore, quisquam
                 dolorum magni ipsa incidunt quasi iusto a? Porro cum esse
                 cupiditate nulla quasi?
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center content">
+        <div class="col-md-6 text-center">
+          <div class="row justify-content-center">
+            <div class="col-10 col-lg-8 blurb">
+              <h2>MUESEUM OF CANDY</h2>
               <img
+              src="/imgs/lolli_icon.png"
+              class="d-none d-lg-inline"
+              alt=""
+            />
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Assumenda et ipsam harum aliquid tempora sequi tempore, quisquam
+                dolorum magni ipsa incidunt quasi iusto a? Porro cum esse
+                cupiditate nulla quasi?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 px-0">
+          <img
+            src="/imgs/gumball.png"
+            class="img-fluid"
+            alt="cake pop milk treats"
+          />
+        </div>
+        <div class="row align-items-center content">
+          <div class="col-md-6 px-0 order-2 order-md-1">
+            <img
+              src="/imgs/sprinkles.png"
+              class="img-fluid"
+              alt="cake pop milk treats"
+            />
+          </div>
+          <div class="col-md-6 text-center order-1 order-md-2">
+            <div class="row justify-content-center">
+              <div class="col-10 col-lg-8 blurb">
+                <h2>MUESEUM OF CANDY</h2>
+                <img
                 src="/imgs/lolli_icon.png"
                 class="d-none d-lg-inline"
                 alt=""
               />
+                <p class="lead">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Assumenda et ipsam harum aliquid tempora sequi tempore, quisquam
+                  dolorum magni ipsa incidunt quasi iusto a? Porro cum esse
+                  cupiditate nulla quasi?
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -115,11 +169,8 @@
     </section>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
       integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -130,5 +181,13 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $( function () {
+        $(document).scroll(function(){
+          var $nav = $("#mainNavbar");
+          $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+        });
+      });
+    </script>
   </body>
 </html>
